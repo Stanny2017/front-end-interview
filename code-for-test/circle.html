@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>didi</title>
+    <style>
+        .icon-wrap {
+            width: 500px;
+            height: 500px;
+            box-sizing: border-box;
+            /* border: 20px solid blue; */
+            background: lavender;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        .icon {
+            width: 300px;
+            height: 300px;
+            background: blanchedalmond;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+
+        .icon-wrap .icon .icon-didi {
+            width: 260px;
+            height: 40px;
+            background: lightcoral;
+
+            box-sizing: border-box;
+        }
+
+        .icon-didi::after {
+            content: '';
+            display: block;
+            width: 300px;
+            height: 150px;
+            border-width: 0 40px 40px 40px;
+            border-style: solid;
+            border-radius: 0 0 150px 150px;
+            border-color: transparent lightcoral lightcoral lightcoral;
+            box-sizing: border-box;
+            position: relative;
+            top: 40px;
+        }
+
+
+        .icon-wrap-2 {
+            margin: 20px auto;
+            width: 500px;
+            height: 500px;
+            background: lavenderblush;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .center {
+            position: absolute;
+            left: 50%;
+
+            top: 50%;
+            margin-top: -57.5px;
+            margin-left: -5px;
+
+        }
+
+        .ke {
+            width: 200px;
+            height: 100px;
+            /* background: lightblue; */
+            border-width: 0 20px 20px 20px;
+            border-style: solid;
+            border-radius: 0 0 100px 100px;
+            border-color: transparent blue blue blue;
+            box-sizing: border-box;
+            position: relative;
+            left: -70px;
+            top: 50px;
+        }
+
+        .ke:before,
+        .ke:after {
+            /* left-top */
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 150px;
+            transform: rotate(55deg);
+            background: blue;
+            position: relative;
+            left: 17px;
+            top: -160px;
+            /* border-radius: 10px 0 10px 10px； */
+        }
+
+        .ke:before {
+            border-radius: 150px 0 150px 150px;
+        }
+
+        .ke:after {
+            /* right-top */
+            transform: rotate(-55deg);
+            left: 99px;
+            border-radius: 0 10px 10px 10px;
+
+        }
+
+
+        .didi{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 50px;
+            border-color: #fc9153;
+        }
+        .circle{
+            border-style: solid;
+            border-color: #fc9153;
+            border-width: 0 20px 20px 20px;
+            width: 80px;
+            height: 50px;
+            border-radius: 0 0 60px 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-wrap">
+        <div class="icon">
+            <div class="icon-didi"></div>
+        </div>
+    </div>
+
+
+    <div class="icon-wrap-2">
+        <div class="center">
+            <div class="ke">
+            </div>
+        </div>
+    </div>
+
+    <div class="icon-wrap">
+        <div class="icon">
+            <!-- 以下是晓倩的代码 -->
+            <div class="didi"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

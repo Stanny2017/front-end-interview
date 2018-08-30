@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>test popUp</title>
+    </head>
+    <style> 
+        .wrap{
+            width: 500px;
+            height: 500px;
+            border: 10px dashed gray;
+            position: relative;
+        }
+        .horizontal,.vertical{
+            background: gray;
+            position: absolute;
+            left: 50%;
+            top: 50%
+        }
+        .horizontal{
+            width: 150px;
+            height: 20px;
+            margin-left: -75px;
+            margin-top: -10px;
+          
+        }
+        .vertical{
+            height: 150px;
+            width: 20px;
+            margin-left: -10px;
+            margin-top: -75px;
+        }
+    </style>
+    <body>
+        <div class="wrap">
+            <div class="horizontal"></div>
+            <div class="vertical"></div>
+        </div>
+        <hr />
+        <div>
+            <img src="" alt="nihaho img img2" id='image2' class="ni hadf  adfa " title="哈">
+        </div>
+
+        <script>
+            console.log(document.getElementById('image2').classList)
+        </script>
+    </body>
+</html>

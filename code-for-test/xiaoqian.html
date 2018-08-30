@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>画个半圆</title>
+    <!-- <link rel="icon" type="image/x-icon" href="burst.png" /> -->
+    <style>
+        .didi {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 50px;
+            border-color: #fc9153;
+        }
+
+        .circle {
+            border-style: solid;
+            border-color: #fc9153;
+            border-width: 0px 20px 20px 20px;
+            width: 80px;
+            height: 50px;
+            border-radius: 0px 0px 60px 60px;
+        }
+
+        .test {
+            width: 100px;
+            height: 50px;
+            border-radius: 0 0 60px 60px;
+            background: lightblue;
+            border-width: 0 10px 10px 10px;
+            border-style: solid;
+            border-color: #fc9153;
+        }
+
+        ul {
+            background: lightblue;
+        }
+
+        ul li {
+            /* background: #fc9153 */
+            list-style: none;
+            /* display: inline-block; */
+            /* display: block; */
+            /* display: inline; */
+            float: left;
+            padding: 1em;
+            background: #fc9153
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="didi">
+    </div>
+    <div class="circle"></div>
+    <div class="test"></div>
+
+
+    <ul>
+        <li>nihao </li>
+        <li>niubi</li>
+        <li>laal</li>
+    </ul> -->
+
+    <style>
+        .float-test {
+            margin-top: 100px;
+
+            background: lightblue;
+        }
+
+        .float-test .wrap {
+            width: 20%;
+            margin: 50px auto;
+            background: whitesmoke;
+            /* display: table; */
+            /* position: absolute; */
+            /* overflow: hidden; */
+            /* float: left; */
+
+            float: left;
+        
+        }
+
+        .float-left {
+            float: left;
+            background: #fc9153;
+            height: 100px;
+        }
+
+
+        
+
+        .blank {
+            clear: both;
+        }
+
+
+    </style>
+
+    <div class="float-test">
+
+        <div class="wrap">
+            
+            <div class="float-left">
+                我是浮动元素
+            </div>
+   
+            <!-- <div class="blank"></div> -->
+
+        </div>
+    </div>
+</body>
+
+</html>
