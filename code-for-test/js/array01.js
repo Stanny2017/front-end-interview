@@ -29,7 +29,7 @@ function combineArray(arr1, arr2) {
 
 }
 
-console.log(combineArray([],[0, 2, 4, 67, 100]))
+//console.log(combineArray([], [0, 2, 4, 67, 100]))
 
 // by xiaoqian-Guo
 
@@ -69,4 +69,84 @@ function mergeArr(arr1, arr2) {
 }
 var arr1 = [1, 3, 5, 7, 9];
 var arr2 = [2, 4, 6, 8, 10, 12];
-console.log(mergeArr(arr1, arr2));
+//console.log(mergeArr(arr1, arr2));
+
+
+/**
+ *  给定一个数组，要求 i<j && a[i]-a[j] 最大
+ */
+
+const findMax = arr => {
+    let max = -Infinity
+    let diff, left, right
+    const len = arr.length
+    for (let i = 0; i < len - 1; i++) {
+        for (j = len - 1; j > i; j--) {
+            diff = arr[i] - arr[j]
+            if (diff > max) {
+                left = i
+                right = j
+                max = diff
+            } else {
+                continue
+            }
+        }
+    }
+
+    return {
+        diff,
+        left,
+        right
+    }
+}
+console.log(typeof findMax)
+
+let { diff, left, right } = findMax([2, 4, 5, -3, -10])
+console.log(diff, left, right)
+
+/**
+ *  0.1+0.2 = 0.3000000004
+ */
+
+// solution 1
+function solution1(a, b) {
+    var arrA = a.toString().split('.')
+    var arrB = b.toString().split('.')
+
+    var lengthOfA = (arrA[1] && arrA[1].length) || 0,
+        lengthOfB = (arrB[1] && arrB[1].length) || 0
+    var maxLen = lengthOfA >= lengthOfB ? lengthOfA : lengthOfB
+    return (a + b).toFixed(maxLen)
+}
+
+// solution 2
+function solution2(a, b) {
+    var arrA = a.toString().split('.')
+    var arrB = b.toString().split('.')
+
+    var demicalOfA = arrA[1]
+    var demicalOfB = arrB[1]
+
+    var lengthOfA = (demicalOfA && demicalOfA.length) || 0,
+        lengthOfB = (demicalOfB && demicalOfB.length) || 0
+
+    var minLen = lengthOfA <= lengthOfB ? lengthOfA : lengthOfB
+
+    var sum;
+    var flag = false;
+    var demicalSum = 0;
+    var demicalArr = []
+    for (var i = minLen - 1; i >= 0; i--) {
+        demicalSum = demicalOfA[i] + demicalOfB[i]
+        if (flag) sum++;
+        if (sum >= 10) {
+            sum = sum - 10
+
+            flag = true
+        } else {
+            flag = false
+        }
+        demicalArr.push(sum)
+    }
+    
+}
