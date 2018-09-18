@@ -22,12 +22,12 @@ function Fn3() { }
 var a = new Fn3()
 var b = new Fn3()
 
-Fn3.prototype._id = 1
-a._id=10;
+Fn3.prototype._id = [1]
+// a._id=10;
 console.log(b._id);
 Object.defineProperty(Fn3.prototype, "id", {
     get: function () {
-        return this._id++
+        return this._id[0]++
     }
 })
 

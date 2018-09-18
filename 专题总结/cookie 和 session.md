@@ -7,14 +7,17 @@ cookie 通常保存的值包括 name、value、到期时间，所属域名。浏
 2. 一般来说，单个域名设置的cookie 不超过 30 个，每个 cookie 的存储上限是 4kb, 不用浏览器的设置不太一样；
 3. cookie 不设置过期时间的话是存储在内存中，浏览器关闭就删除；设置了过期时间就是存储在硬盘中。
 3. 禁用 cookie 可以在浏览器端也可以在服务端
-4. `document.cookie` 属性用于读写 cookie
+4. `document.cookie` 属性用于读写 cookie；设置 http-only 可以禁止 js 访问 cookie
+```js
+// 读取浏览器是否禁用了 cookie
+navigator.cookieEnabled //  false 则禁用了 cookie
+```
 5. cookie 安全性不高 容易被窃取
+6. 禁用 cookie 在浏览器端使用 隐身模式
 
 ```javascript
 // 浏览器是否打开 Cookie 功能
 window.navigator.cookieEnabled // true
-
-// 在服务端 响应报文头部 cache-control:no-cache
 ```
 
 ## session
